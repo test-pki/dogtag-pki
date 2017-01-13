@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fabf19d9_706ebbca",
+        "filename": "base/java-tools/src/com/netscape/cmstools/PrettyPrintCrl.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010222
+      },
+      "writtenOn": "2017-01-13T20:10:18Z",
+      "side": 0,
+      "message": "test comment",
+      "revId": "65f1b0930147c1453fd9c0826e5c62856e1d2a8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
