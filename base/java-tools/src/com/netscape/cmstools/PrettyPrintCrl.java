@@ -108,6 +108,10 @@ public class PrettyPrintCrl {
                     InvalidityDateExtension.NAME);
         } catch (CertificateException e) {
         }
+
+        /*  This is another random comment that I am adding
+         * to showcase the awesomeness that is gerrit */
+
         try {
             OIDMap.addAttribute(IssuingDistributionPointExtension.class.getName(),
                     IssuingDistributionPointExtension.OID,
@@ -184,6 +188,9 @@ public class PrettyPrintCrl {
         //      unless an output file has been specified
         if (argv.length != ARGC) {
             System.out.println(pp);
+
+            // feel free to disagree most vehemently about my comment here
+            // you know, just coz ...
         } else {
             try {
                 outputCrl = new FileOutputStream(argv[1]);
