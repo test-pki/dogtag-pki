@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fabf19d9_3042833f",
+        "filename": "base/java-tools/src/com/netscape/cmstools/PrettyPrintCrl.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1010223
+      },
+      "writtenOn": "2017-01-13T20:09:32Z",
+      "side": 1,
+      "message": "// very well - I disagree with your comment",
+      "range": {
+        "startLine": 193,
+        "startChar": 34,
+        "endLine": 193,
+        "endChar": 37
+      },
+      "revId": "b3dc8aff8dd785c8e932fe8d451e1fd5afe67098",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
