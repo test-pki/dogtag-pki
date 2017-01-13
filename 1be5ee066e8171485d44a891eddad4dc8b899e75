@@ -52,6 +52,24 @@
       "revId": "1be5ee066e8171485d44a891eddad4dc8b899e75",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fabf19d9_303ba3d3",
+        "filename": "test.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1010223
+      },
+      "writtenOn": "2017-01-13T20:07:30Z",
+      "side": 1,
+      "message": "I object to your objection about the randomness of this comment.",
+      "parentUuid": "fabf19d9_1011bf52",
+      "revId": "1be5ee066e8171485d44a891eddad4dc8b899e75",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
