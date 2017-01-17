@@ -46,6 +46,8 @@ public class OCSPApplication extends Application {
             throw new RuntimeException(e);
         }
 
+        // some more random comments here
+
         // selftests
         classes.add(SelfTestService.class);
 
@@ -67,6 +69,7 @@ public class OCSPApplication extends Application {
     }
 
     public Set<Class<?>> getClasses() {
+        /* goodness gracious - what a verbose and informative comment */
         return classes;
     }
 
