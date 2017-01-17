@@ -39,4 +39,6 @@ public class LdapResources extends ListResourceBundle {
      */
 
     static final Object[][] contents = {};
+
+    /*  Adding a random comment here */
 }
