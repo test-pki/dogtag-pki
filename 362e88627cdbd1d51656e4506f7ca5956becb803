@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fabf19d9_d8d92285",
+        "filename": "base/ocsp/src/org/dogtagpki/server/ocsp/rest/OCSPApplication.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1010256
+      },
+      "writtenOn": "2017-01-17T21:56:38Z",
+      "side": 1,
+      "message": "ladycfu says hello world",
+      "revId": "362e88627cdbd1d51656e4506f7ca5956becb803",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fabf19d9_b8e8ae11",
+        "filename": "base/ocsp/src/org/dogtagpki/server/ocsp/rest/OCSPApplication.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1010256
+      },
+      "writtenOn": "2017-01-17T21:56:38Z",
+      "side": 1,
+      "message": "Indeed it is.",
+      "revId": "362e88627cdbd1d51656e4506f7ca5956becb803",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
