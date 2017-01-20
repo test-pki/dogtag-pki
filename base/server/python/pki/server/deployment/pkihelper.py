@@ -4020,6 +4020,11 @@ class ConfigClient:
         # Misc CA parameters
         if self.subsystem == "CA":
             data.startingCRLNumber = self.mdict['pki_ca_starting_crl_number']
+            data.deleteSigningCertRecord = (
+                self.mdict['pki_ca_delete_signing_cert_record'])
+            data.signingCertSerialNumber = (
+                self.mdict['pki_ca_signing_cert_serial_number']
+            )
 
         return data
 
