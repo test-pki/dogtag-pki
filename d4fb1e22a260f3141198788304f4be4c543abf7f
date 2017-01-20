@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fabf19d9_a1cf477e",
+        "filename": "base/ca/src/org/dogtagpki/server/ca/rest/CAInstallerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1006809
+      },
+      "writtenOn": "2017-01-20T17:18:06Z",
+      "side": 1,
+      "message": "I dont think you should be doing this.  Do this instead.",
+      "revId": "d4fb1e22a260f3141198788304f4be4c543abf7f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fabf19d9_81ca036d",
+        "filename": "base/ca/src/org/dogtagpki/server/ca/rest/CAInstallerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1006809
+      },
+      "writtenOn": "2017-01-20T17:18:06Z",
+      "side": 1,
+      "message": "You  forgot to release the connection",
+      "revId": "d4fb1e22a260f3141198788304f4be4c543abf7f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fabf19d9_61c92f78",
+        "filename": "base/server/etc/default.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 1006809
+      },
+      "writtenOn": "2017-01-20T17:18:06Z",
+      "side": 1,
+      "message": "make tvariable pki_ca-delete_foo instead",
+      "revId": "d4fb1e22a260f3141198788304f4be4c543abf7f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
