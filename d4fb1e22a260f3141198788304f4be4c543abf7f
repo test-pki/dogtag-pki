@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "fabf19d9_2189f726",
+        "filename": "base/ca/src/org/dogtagpki/server/ca/rest/CAInstallerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1010256
+      },
+      "writtenOn": "2017-01-20T17:23:13Z",
+      "side": 1,
+      "message": "my comment",
+      "revId": "d4fb1e22a260f3141198788304f4be4c543abf7f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fabf19d9_81ca036d",
         "filename": "base/ca/src/org/dogtagpki/server/ca/rest/CAInstallerService.java",
         "patchSetId": 1
