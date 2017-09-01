@@ -1,0 +1,70 @@
+sudo: required
+language: python
+
+services:
+  - docker
+cache: pip
+env:
+  global:
+    - CONTAINER=pkitest
+    - SCRIPTDIR=/tmp/workdir/pki/.travis
+    - PKI_LOG=pki_log.log
+    - CI_RESULTS_LOG="ci_results_${TRAVIS_BRANCH}.log"
+    - CI_RUNNER_LOG_ARCHIVE="dogtag-ci-job-${TRAVIS_JOB_NUMBER}.tar.gz"
+    - IMAGE=dogtagpki/pki-ci-containers:f25_104
+  matrix:
+    - TASK_TO_RUN="run-dogtag-build"
+
+    - TASK_TO_RUN="run-ipa-test"
+      IPA_TEST_RUNNER_IMAGE="dogtagpki/dogtag-freeipa-ci-containers:f25_ipa_4-5"
+      RPMS_LOCATION=/tmp/workdir/packages/RPMS
+      DOGTAG_PKI_RPMS=${TRAVIS_BUILD_DIR}/dogtag_rpms
+    # F26 repo is unstable
+    # - IMAGE=dogtagpki/pki-ci-containers:f26_104
+    # rawhide repo is unstable
+    # - IMAGE=dogtagpki/pki-ci-containers:rawhide
+
+before_install:
+  - docker pull ${IMAGE}
+  - >
+    docker run
+    --detach
+    --name=${CONTAINER}
+    --hostname='pki.test'
+    --privileged
+    --tmpfs /tmp
+    --tmpfs /run
+    -v /sys/fs/cgroup:/sys/fs/cgroup:ro
+    -v $(pwd):/tmp/workdir/pki
+    -e BUILDUSER_UID=$(id -u)
+    -e BUILDUSER_GID=$(id -g)
+    -e TRAVIS=${TRAVIS}
+    -e TRAVIS_JOB_NUMBER=${TRAVIS_JOB_NUMBER}
+    -ti
+    ${IMAGE}
+
+install:
+  - docker exec -ti ${CONTAINER} /bin/ls -la /tmp/workdir
+
+  - docker exec -ti ${CONTAINER} ${SCRIPTDIR}/00-init
+  - docker exec -ti ${CONTAINER} ${SCRIPTDIR}/10-compose-rpms
+
+  # IPA related installs
+  - pip install --upgrade pip
+  - pip3 install --upgrade pip
+  - pip install pep8
+  - >
+
+script:
+  # It is time to run FreeIPA tests with new Dogtag RPMS built
+  - travis_wait 20 ./.travis_run_task.sh
+after_script:
+  - docker kill ${CONTAINER}
+  - docker rm ${CONTAINER}
+
+# The errors can be in either dogtag container or freeipa container
+after_failure:
+  - docker exec ${CONTAINER} journalctl  -l > ${PKI_LOG}
+  - echo "Uploading CI Logs to transfer.sh ..."
+  - curl --upload-file ./${PKI_LOG} https://transfer.sh/dogtag_build_logs.txt
+  - curl --upload-file ./${CI_RESULTS_LOG} https://transfer.sh/freeipa-integration.txt
